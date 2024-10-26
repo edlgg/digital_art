@@ -1,0 +1,8 @@
+scipy
+gltflib
+imageio
+pillow
+numpy
+accelerate
+transformers
+diffusers

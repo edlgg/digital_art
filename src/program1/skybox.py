@@ -1,4 +1,3 @@
-import imageio.v3 as iio
 from wgpu.gui.auto import WgpuCanvas, run
 import pygfx as gfx
 import pylinalg as la
@@ -6,7 +5,7 @@ from consts import DATA_DIR
 from PIL import Image
 import numpy as np
 
-image_path = DATA_DIR / "depa_cube.jpg"
+image_path = DATA_DIR / "meadow_cube.jpg"
 
 im = Image.open(image_path)
 im = np.array(im)
@@ -58,6 +57,7 @@ def animate():
 
     rot = la.quat_from_euler((0, 0.005), order="XY")
     camera.local.rotation = la.quat_mul(rot, camera.local.rotation)
+    print(camera.loca.rotation)
 
     renderer.render(scene, camera)
     canvas.request_draw()

@@ -6,3 +6,5 @@ numpy
 accelerate
 transformers
 diffusers
+wgpu
+bpy
